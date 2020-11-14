@@ -5,10 +5,8 @@ name_lenth = int(input('Enter length of the name:'))
 def name_gen():
     name = ''
     for i in range(name_lenth):
-        if i == 0:
-            name = name+random.choice(string.ascii_uppercase)
-        else:
-            name = name+random.choice(string.ascii_lowercase)
+        name = name+random.choice(string.ascii_lowercase)
+    name = name[0].upper()+name[1:name_lenth]
     return name
 
-print(name_gen())
+print(name_gen()) 
