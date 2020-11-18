@@ -22,5 +22,7 @@ for idx0,val0 in enumerate(array):
 
 print("th sum was found with %d combinations:" % occurrence)
 
+print('the program is not yet accurate, it needs to remove the same occurences')
+
 
 

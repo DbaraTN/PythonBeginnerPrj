@@ -9,4 +9,4 @@ def name_gen():
     name = name[0].upper()+name[1:name_lenth]
     return name
 
-print(name_gen()) 
+print(random.randint(1,3))
