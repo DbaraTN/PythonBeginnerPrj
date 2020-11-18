@@ -1,0 +1,26 @@
+import random
+
+N = int(input("Enter array size:"))
+K = int(input("Enter an integer to be found:"))
+array = []
+i1 = 0
+i2 = 0
+i3 = 0
+for i in range(N):
+    array = array + [random.randint(1,100)]
+print(array)
+occurrence = 0
+for idx0,val0 in enumerate(array):
+    if val0 < K:
+        for idx1, val1 in enumerate(array):
+            if idx0 != idx1 and val0+val1 < K:
+                for idx2, val2 in enumerate(array):
+                    if idx1 != idx2 and idx0 != idx2 and val0+val1+val2 == K:
+                        array.remove(idx1)
+                        print ("the Sum of %d (index:%d), %d (index: %d) and %d (index: %d) is %d " % (val0,idx0,val1, idx1,val2,idx2,K))
+                        occurrence +=1
+
+print("th sum was found with %d combinations:" % occurrence)
+
+
+
